@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Query Improvement Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- https://getbootstrap.com/docs/3.3/getting-started/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style type="text/css">
+        caption {
+            display: table-caption;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container jumbotron text-center">
+            <h1>Query Improvement Report</h1>
+
+            <div class="row"><span class="col-md-1 col-md-offset-5 text-right">Server:</span><span class="col-md-4 text-left"><!--{ServerName}--></span></div>
+            <div class="row"><span class="col-md-1 col-md-offset-5 text-right">Database:</span><span class="col-md-4 text-left"><!--{DatabaseName}--></span></div>
+            <div class="row"><span class="col-md-1 col-md-offset-5 text-right">User:</span><span class="col-md-4 text-left"><!--{UserName}--></span></div>
+            <div class="row"><span class="col-md-1 col-md-offset-5 text-right">Date:</span><span class="col-md-4 text-left"><!--{Date}--></span></div>
+        </div>
+
+        <div class="container" style="margin-top:2em;">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <table class="table table-striped table-condensed table-bordered table-sm">
+                        <caption class="bg-info">Overall Query Statistics</caption>
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>Execution Time (hh:mm:ss.ms)</th>
+                                <th>CPU / Worker Time (hh:mm:ss.ms)</th>
+                                <th>Plan Compile Time (hh:mm:ss.ms)</th>
+                                <th>Scan Count</th>
+                                <th>Logical Reads (pages)</th>
+                                <th>Physical Reads (pages)</th>
+                                <th>Physical Reads (MB)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Original</td>
+                                <td><!--{exec_time_old}--></td>
+                                <td><!--{cpu_time_old}--></td>
+                                <td><!--{plan_compile_time_old}--></td>
+                                <td><!--{scan_count_old}--></td>
+                                <td><!--{logical_reads_old}--></td>
+                                <td><!--{physical_reads_old}--></td>
+                                <td><!--{physical_reads_mb_old}--></td>
+                            </tr>
+                            <tr>
+                                <td>Improved</td>
+                                <td><!--{exec_time_new}--></td>
+                                <td><!--{cpu_time_new}--></td>
+                                <td><!--{plan_compile_time_new}--></td>
+                                <td><!--{scan_count_new}--></td>
+                                <td><!--{logical_reads_new}--></td>
+                                <td><!--{physical_reads_new}--></td>
+                                <td><!--{physical_reads_mb_new}--></td>
+                            </tr>
+                            <tr style="white-space:nowrap;font-weight:bold;">
+                                <td>Improvement %</td>
+                                <td<!--{exec_time_style}-->><!--{exec_time_delta}--></td>
+                                <td<!--{cpu_time_style}-->><!--{cpu_time_delta}--></td>
+                                <td<!--{plan_compile_time_style}-->><!--{plan_compile_time_delta}--></td>
+                                <td<!--{scan_count_style}-->><!--{scan_count_delta}--></td>
+                                <td<!--{logical_reads_style}-->><!--{logical_reads_delta}--></td>
+                                <td<!--{physical_reads_style}-->><!--{physical_reads_delta}--></td>
+                                <td<!--{physical_reads_mb_style}-->><!--{physical_reads_mb_delta}--></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-striped table-condensed table-bordered table-sm">
+                        <caption class="bg-info">Old Statements</caption>
+                        <thead>
+                            <tr>
+                                <th>Statement ID</th>
+                                <th>Cost</th>
+                                <th>Used Memory Grant (MB)</th>
+                                <th>Optimization Abort Reason</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--{OldStatementRows}-->
+                        </tbody>
+                    </table>
+                </div>
+                <!--<div class="col-md-2"></div>-->
+                <div class="col-md-6">
+                    <table class="table table-striped table-condensed table-bordered table-sm">
+                        <caption class="bg-info">New Statements</caption>
+                        <thead>
+                            <tr>
+                                <th>Statement ID</th>
+                                <th>Cost</th>
+                                <th>Used Memory Grant (MB)</th>
+                                <th>Optimization Abort Reason</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--{NewStatementRows}-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+</body>
+</html>

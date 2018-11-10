@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ComparisonTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ComparisonTemplate.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="KEYWORDS" xml:space="preserve">
+    <value>abs absolute access add_months adddate admin after aggregate allocate are array assertion at audit authid autonomous_transaction avg before benchmark bfilename bigint bin binary binary_checksum binary_integer bit bit_count bit_and bit_or blob body boolean both breadth call cascaded catalog ceil char_base character chartorowid checksum checksum_agg chr class clob cluster collation collect comment completion compress connect connection constant constraints constructorcreate containsable conv corr corresponding count count_big covar_pop covar_samp cube cume_dist current_path current_role currval cycle data date date_add date_format date_sub datetime dec decimal decode deferrable deferred dense_rank depth deref describe descriptor destroy destructor deterministic diagnostics dictionary disconnect do domain dynamic each elsif empth encode encrypt equals every exception exclusive export_set extends extract false first first_value float forall formatmessage found from_days fulltextcatalog fulltextservice general get get_lock getansinull global go greatest grouping heap hex hextoraw host host_id host_name hour ident_incr ident_seed ident_current identified ifnull ignore immediate increment indicator initcap initial initialize initially inout input instr instrb int integer interface interval is_null is_numeric isolation iterate java lag language large last last_day last_value lateral lcase lead leading least length lengthb less level limit limited ln lpad local localtime localtimestamp locator lock long loop make_ref map match max maxextents mid min minus minute mlslabel mod mode modifies modify module months_between names natural naturaln nclob new new_time newid next_day nextval no noaudit nocompress nocopy none nowait number number_base numeric nvl nvl2 object object_property ocirowid oct offline old online only opaque operator operation ord ordinalityorganization others out output package pad parameter parameters partial partition path pctfree percent_rank pls_integer positive positiven postfix pow pragma prefix preorder prepare preserve prior private privileges raise range rank ratio_to_export raw rawtohex reads real record recursive ref referencing reftohex relative release release_lock rename repeat resource result returns rollup routine row row_number rowid rowidtochar rowlabel rownum rows rowtype rpad savepoint scroll scope search second section seddev_samp separate sequence session sets share sinh size smallint specific specifictype sql sqlcode sqlerrm sqlexception sqlstate sqlwarning start state statement static std stddev stdev_pop strcmp structure subdate substr substrb substring_index subtype successful sum synonym sys_context sys_guid sysdate tanh temporary terminate than time timestamp timezone_abbr timezone_minute timezone_hour timezone_region tinyint to_char to_date to_days to_number to_single_byte trailing translation treat true trunc type ucase uid under unknown unnest usage userenv using validate var_pop var_samp varbinary char varchar nchar nvarchar varchar2 variable variance vsize whenever without work write zone</value>
+  </data>
+  <data name="KEYWORDS2" xml:space="preserve">
+    <value>add external procedure all fetch public alter file raiserror and fillfactor read any readtext as foreign reconfigure asc freetext references authorization freetexttable replication backup from restore begin full restrict between function return break goto revert browse grant revoke bulk group by having rollback cascade holdlock rowcount case identity rowguidcol check identity_insert rule checkpoint identitycol save close if schema clustered in securityaudit index select collate inner semantickeyphrasetable column insert semanticsimilaritydetailstable commit intersect semanticsimilaritytable compute into constraint is set contains join setuser containstable key shutdown continue kill some statistics create like cross lineno table current load tablesample current_date merge textsize current_time national then nocheck to nonclustered top cursor not tran database null transaction dbcc trigger deallocate of truncate declare off default offsets tsequal delete on union deny open unique desc opendatasource unpivot disk openquery update distinct openrowset updatetext distributed openxml use double option user drop or values dump order varying else outer view end over waitfor errlvl percent when escape pivot where except plan while exec precision with execute primary within group exists print writetext exit proc apply</value>
+  </data>
+  <data name="KEYWORDS3" xml:space="preserve">
+    <value>abs datediff power  acos day radians  asin degrees round  atan exp sign  atn2 floor sin  ceiling isnull square  coalesce isnumeric sqrt  cos log tan  cot log10 year  datalength month   dateadd nullif  @@datefirst @@options  @@dbts @@remserver  @@langid @@servername  @@language @@servicename  @@lock_timeout @@spid  @@max_connections @@textsize  @@max_precision @@version  @@nestlevel   cast convert    parse    try_cast    try_convert    try_parse    @@cursor_rows cursor_status  @@fetch_status   sysdatetime  sysdatetimeoffset  sysutcdatetime  current_timestamp  getdate  getutcdate datename datepart day month year datefromparts datetime2fromparts datetimefromparts datetimeoffsetfromparts smalldatetimefromparts timefromparts datediff  datediff_big dateadd eomonth switchoffset todatetimeoffset isdate  isjson  json_value   json_query   json_modify  abs degrees rand  acos exp round  asin floor sign  atan log sin  atn2 log10 sqrt  ceiling pi square  cos power tan  cot radians   @@procid index_col  app_name indexkey_property  applock_mode indexproperty  applock_test next value for  assemblyproperty object_definition  col_length object_id  col_name object_name  columnproperty object_schema_name  database_principal_id objectproperty  databasepropertyex objectpropertyex  db_id original_db_name  db_name parsename  file_id schema_id  file_idex schema_name  file_name scope_identity  filegroup_id serverproperty  filegroup_name stats_date  filegroupproperty type_id  fileproperty type_name  fulltextcatalogproperty typeproperty  fulltextserviceproperty version  certencoded  pwdcompare   certprivatekey  pwdencrypt   current_user  schema_id   database_principal_id  schema_name   sys.fn_builtin_permissions  session_user   sys.fn_get_audit_file  suser_id   sys.fn_my_permissions  suser_sid   has_perms_by_name  suser_sname   is_member  system_user   is_rolemember  suser_name   is_srvrolemember  user_id   original_login  user_name   permissions    ascii char charindex  concat concat_ws difference  format left len  lower ltrim nchar  patindex quotename replace  replicate reverse right  rtrim soundex space  str string_agg string_escape  string_split stuff substring  translate trim unicode  upper  @@connections @@pack_received  @@cpu_busy @@pack_sent  fn_virtualfilestats @@timeticks  @@idle @@total_errors  @@io_busy @@total_read  @@packet_errors @@total_write</value>
+  </data>
+</root>
