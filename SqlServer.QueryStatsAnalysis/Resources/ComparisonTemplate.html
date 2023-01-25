@@ -41,6 +41,8 @@
                                 <th>Logical Reads (pages)</th>
                                 <th>Physical Reads (pages)</th>
                                 <th>Physical Reads (MB)</th>
+                                <th>Cost</th>
+                                <th>Used Memory Grant (MB)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,6 +55,8 @@
                                 <td><!--{logical_reads_old}--></td>
                                 <td><!--{physical_reads_old}--></td>
                                 <td><!--{physical_reads_mb_old}--></td>
+                                <td><!--{statement_cost_old}--></td>
+                                <td><!--{statement_used_memory_grant_old}--></td>
                             </tr>
                             <tr>
                                 <td>Changed</td>
@@ -63,6 +67,8 @@
                                 <td><!--{logical_reads_new}--></td>
                                 <td><!--{physical_reads_new}--></td>
                                 <td><!--{physical_reads_mb_new}--></td>
+                                <td><!--{statement_cost_new}--></td>
+                                <td><!--{statement_used_memory_grant_new}--></td>
                             </tr>
                             <tr style="white-space:nowrap;font-weight:bold;">
                                 <td>Changes %</td>
@@ -73,6 +79,8 @@
                                 <td<!--{logical_reads_style}-->><!--{logical_reads_delta}--></td>
                                 <td<!--{physical_reads_style}-->><!--{physical_reads_delta}--></td>
                                 <td<!--{physical_reads_mb_style}-->><!--{physical_reads_mb_delta}--></td>
+                                <td<!--{statement_cost_style}-->><!--{statement_cost_delta}--></td>
+                                <td<!--{statement_used_memory_grant_style}-->><!--{statement_used_memory_grant_delta}--></td>
                             </tr>
                         </tbody>
                     </table>
