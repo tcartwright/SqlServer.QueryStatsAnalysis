@@ -110,13 +110,13 @@ namespace QueryStatsAnalysis
                     var queryText = txtQuery.Text;
                     var clean = chkClean.Checked;
                     CancellationTokenSource cancelToken = new CancellationTokenSource();
-                    WaitDialog.ShowDialog(this, 
-                        () => analyzeQuery.GetQueryStats(queryText, clean, cancelToken), 
-                        "Run Query", 
-                        "Running query ...", 
-                        cancelToken, 
+                    WaitDialog.ShowDialog(this,
+                        () => analyzeQuery.GetQueryStats(queryText, clean, cancelToken),
+                        "Run Query",
+                        "Running query ...",
+                        cancelToken,
                         out _results);
-                   
+
                     if (_results == null)
                     {
                         //they canceled the query
@@ -609,6 +609,8 @@ namespace QueryStatsAnalysis
             comparisonTemplate = ReplaceTemplateParameter(comparisonTemplate, "logical_reads", _baseLineResults.logical_reads, _results.logical_reads);
             comparisonTemplate = ReplaceTemplateParameter(comparisonTemplate, "physical_reads", _baseLineResults.physical_reads, _results.physical_reads);
             comparisonTemplate = ReplaceTemplateParameter(comparisonTemplate, "physical_reads_mb", _baseLineResults.physical_reads / 128.0, _results.physical_reads / 128.0);
+            comparisonTemplate = ReplaceTemplateParameter(comparisonTemplate, "statement_cost", Math.Round(_baseLineResults.execution_plan_statements.Sum(x => x.statement_cost), 4), Math.Round(_results.execution_plan_statements.Sum(x => x.statement_cost), 4));
+            comparisonTemplate = ReplaceTemplateParameter(comparisonTemplate, "statement_used_memory_grant", _baseLineResults.execution_plan_statements.Sum(x => x.used_memory_grant_kb), _results.execution_plan_statements.Sum(x => x.used_memory_grant_kb));
 
             comparisonTemplate = AddStatements(comparisonTemplate, "<!--{OldStatementRows}-->", _baseLineResults);
             comparisonTemplate = AddStatements(comparisonTemplate, "<!--{NewStatementRows}-->", _results);
